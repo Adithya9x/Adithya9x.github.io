@@ -7,23 +7,15 @@
 <meta name="description" content="Jyothiradithya Madapati — Aspiring SOC Analyst and Cybersecurity Undergraduate at IIIT Kottayam.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="cursor-ring" id="cursorRing"></div>
 <div class="cursor-dot" id="cursorDot"></div>
 
-<div class="hud" id="hud">
-  <div class="hud-row"><span class="hud-label">dwell</span><span class="hud-value" id="hudDwell">0000ms</span></div>
-  <div class="hud-row"><span class="hud-label">velocity</span><span class="hud-value" id="hudVelocity">000 px/s</span></div>
-  <div class="hud-bar"><div class="hud-bar-fill" id="hudFill"></div></div>
-  <div class="hud-row hud-decision"><span class="hud-label">decision</span><span class="hud-value" id="hudDecision">ALLOW</span></div>
-</div>
-
 <header class="nav">
-  <a href="#home" class="nav-logo">JM<span>.</span></a>
+  <a href="#home" class="nav-logo">MJR<span>.</span></a>
   <nav class="nav-links">
     <a href="#about">About</a>
     <a href="#work">Work</a>
@@ -36,6 +28,7 @@
 <main>
 
   <section class="hero" id="home">
+    <div class="hero-orb"></div>
     <p class="hero-kicker">Aspiring SOC Analyst · IIIT Kottayam</p>
     <h1 class="hero-name">Jyothiradithya<br>Madapati</h1>
     <p class="hero-copy">
@@ -85,9 +78,21 @@
           </div>
         </div>
         <div class="skill-group">
-          <p class="skill-label">Systems &amp; Languages</p>
+          <p class="skill-label">Systems</p>
           <div class="tag-row">
-            <span class="tag">Kali Linux</span><span class="tag">Ubuntu</span><span class="tag">Linux</span><span class="tag">Python</span>
+            <span class="tag">Kali Linux</span><span class="tag">Ubuntu</span><span class="tag">Linux</span><span class="tag">Virtual Machines</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-label">Languages</p>
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">C</span><span class="tag">HTML</span><span class="tag">CSS</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-label">Other Skills</p>
+          <div class="tag-row">
+            <span class="tag">Problem Solving</span><span class="tag">Project Management</span><span class="tag">Communication</span>
           </div>
         </div>
       </div>
@@ -96,133 +101,122 @@
 
   <section class="work" id="work">
     <h2 class="section-title">Projects</h2>
-    <ol class="timeline">
+    <div class="project-grid">
 
-      <li class="tl-item">
-        <div class="tl-marker"><span class="tl-date">Feb 2026</span></div>
-        <div class="tl-card">
-          <div class="tl-head">
-            <h3>College AI — RAG Engine</h3>
-            <span class="role-badge">Team · RAG pipeline owner</span>
-          </div>
-          <p class="tl-desc">
-            Owned the retrieval-augmented generation core of a college information
-            chatbot: query understanding, embedding, FAISS-based context retrieval,
-            filtering, prompt construction, and fallback handling, so answers come
-            strictly from verified college data instead of a guess.
-          </p>
-          <div class="tag-row">
-            <span class="tag">Python</span><span class="tag">FAISS</span><span class="tag">Embeddings</span><span class="tag">Prompt Engineering</span>
-          </div>
-          <a class="tl-link" href="https://github.com/Sparrowspidey/College-Ai" target="_blank" rel="noopener">View repository ↗</a>
+      <article class="project-card status-active">
+        <span class="status-badge"><span class="status-dot"></span>Currently working</span>
+        <div class="pc-head">
+          <span class="pc-date">Feb 2026</span>
+          <span class="role-badge">Team · RAG pipeline owner</span>
         </div>
-      </li>
-
-      <li class="tl-item">
-        <div class="tl-marker"><span class="tl-date">Jun 2026</span></div>
-        <div class="tl-card">
-          <div class="tl-head">
-            <h3>Cybersecurity Home Lab &amp; SOC Monitoring</h3>
-            <span class="role-badge">Solo</span>
-          </div>
-          <p class="tl-desc">
-            Designed a virtualized SOC lab — Kali Linux and Ubuntu Server/Desktop on
-            VirtualBox with host-only networking and secure OpenSSH access — then
-            deployed Wazuh to monitor auth logs and failed logins, and simulated an
-            SSH brute-force attack to validate detection end to end.
-          </p>
-          <div class="tag-row">
-            <span class="tag">Wazuh SIEM</span><span class="tag">VirtualBox</span><span class="tag">Kali Linux</span><span class="tag">OpenSSH</span>
-          </div>
+        <h3>College AI — RAG Engine</h3>
+        <p class="pc-desc">
+          Owned the retrieval-augmented generation core of a college information
+          chatbot: query understanding, embedding, FAISS-based context retrieval,
+          filtering, prompt construction, and fallback handling, so answers come
+          strictly from verified college data instead of a guess.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">FAISS</span><span class="tag">Embeddings</span><span class="tag">Prompt Engineering</span>
         </div>
-      </li>
+        <a class="pc-link" href="https://github.com/Sparrowspidey/College-Ai" target="_blank" rel="noopener">View repository ↗</a>
+      </article>
 
-      <li class="tl-item">
-        <div class="tl-marker"><span class="tl-date">Jun 2026</span></div>
-        <div class="tl-card">
-          <div class="tl-head">
-            <h3>Network Traffic Analysis using Wireshark</h3>
-            <span class="role-badge">Solo</span>
-          </div>
-          <p class="tl-desc">
-            Captured and analysed live Wi-Fi traffic across DNS, HTTP, and TLS.
-            Correlated DNS query/response pairs by transaction ID, inspected TLS
-            Client Hello packets for SNI metadata, and flagged anomalies via resets,
-            retransmissions, and timing patterns in a SOC-style incident report.
-          </p>
-          <div class="tag-row">
-            <span class="tag">Wireshark</span><span class="tag">DNS</span><span class="tag">TLS</span><span class="tag">Anomaly Detection</span>
-          </div>
-          <a class="tl-link" href="https://github.com/Adithya9x/network-traffic-analysis-wireshark" target="_blank" rel="noopener">View repository ↗</a>
+      <article class="project-card">
+        <div class="pc-head">
+          <span class="pc-date">Jun 2026</span>
+          <span class="role-badge">Solo</span>
         </div>
-      </li>
-
-      <li class="tl-item">
-        <div class="tl-marker"><span class="tl-date">Jun 2026</span></div>
-        <div class="tl-card tl-card-highlight">
-          <div class="tl-head">
-            <h3>VulnProbe</h3>
-            <span class="role-badge">Solo</span>
-          </div>
-          <p class="tl-desc">
-            A Python scanner that automates vulnerability assessment: port scanning,
-            service fingerprinting via Nmap, and CVE cross-referencing against the
-            NVD API, with auto-generated colour-coded HTML reports.
-          </p>
-          <p class="tl-highlight">Found a real HIGH-severity CVE — CVE-2021-44224 — in an outdated Apache httpd service during testing.</p>
-          <div class="tag-row">
-            <span class="tag">Python</span><span class="tag">Nmap</span><span class="tag">NVD API</span><span class="tag">Sockets</span>
-          </div>
-          <a class="tl-link" href="https://github.com/Adithya9x/VulnProbe" target="_blank" rel="noopener">View repository ↗</a>
+        <h3>Cybersecurity Home Lab &amp; SOC Monitoring</h3>
+        <p class="pc-desc">
+          Designed a virtualized SOC lab — Kali Linux and Ubuntu Server/Desktop on
+          VirtualBox with host-only networking and secure OpenSSH access — then
+          deployed Wazuh to monitor auth logs and failed logins, and simulated an
+          SSH brute-force attack to validate detection end to end.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Wazuh SIEM</span><span class="tag">VirtualBox</span><span class="tag">Kali Linux</span><span class="tag">OpenSSH</span>
         </div>
-      </li>
+      </article>
 
-      <li class="tl-item">
-        <div class="tl-marker"><span class="tl-date">Jun 2026</span></div>
-        <div class="tl-card">
-          <div class="tl-head">
-            <h3>PhantomGrid</h3>
-            <span class="role-badge">Team · Frontend, behavioural capture</span>
-          </div>
-          <p class="tl-desc">
-            A three-layer passive behavioural authentication engine for banking
-            portals — it scores every session on decoy-tap patterns, navigation
-            intent, and PIN-entry rhythm, so stolen credentials alone can't get an
-            attacker in. Built the frontend signal-capture layer, packaging tap,
-            dwell, and keystroke timing into the behavioural payload sent to the
-            scoring backend. Built for the PSBs Hackathon 2026.
-          </p>
-          <div class="tag-row">
-            <span class="tag">JavaScript</span><span class="tag">FastAPI</span><span class="tag">Isolation Forest</span><span class="tag">DTW</span>
-          </div>
-          <a class="tl-link" href="https://github.com/Pyhroff/PhantomGrid" target="_blank" rel="noopener">View repository ↗</a>
+      <article class="project-card">
+        <div class="pc-head">
+          <span class="pc-date">Jun 2026</span>
+          <span class="role-badge">Solo</span>
         </div>
-      </li>
-
-      <li class="tl-item">
-        <div class="tl-marker"><span class="tl-date">Jul 2026</span></div>
-        <div class="tl-card tl-card-highlight">
-          <div class="tl-head">
-            <h3>Sentinel — Deception-Based SOC Detection</h3>
-            <span class="role-badge">Solo</span>
-          </div>
-          <p class="tl-desc">
-            A honeytoken-based detection platform that removes false positives by
-            design: fake AWS credentials, SSH keys, and .env files are planted so
-            any interaction with them is a confirmed attacker action, not a
-            probability. A Python file-monitoring engine tags each event to the
-            relevant MITRE ATT&amp;CK technique and fires a live Flask dashboard the
-            moment a honeytoken is touched.
-          </p>
-          <p class="tl-highlight">Validated end to end against a real simulated attacker on Kali Linux, over SSH, against an Ubuntu victim host.</p>
-          <div class="tag-row">
-            <span class="tag">Python</span><span class="tag">Watchdog/inotify</span><span class="tag">Flask</span><span class="tag">MITRE ATT&amp;CK</span>
-          </div>
-          <a class="tl-link" href="https://github.com/Adithya9x/sentinel-deception" target="_blank" rel="noopener">View repository ↗</a>
+        <h3>Network Traffic Analysis using Wireshark</h3>
+        <p class="pc-desc">
+          Captured and analysed live Wi-Fi traffic across DNS, HTTP, and TLS.
+          Correlated DNS query/response pairs by transaction ID, inspected TLS
+          Client Hello packets for SNI metadata, and flagged anomalies via resets,
+          retransmissions, and timing patterns in a SOC-style incident report.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Wireshark</span><span class="tag">DNS</span><span class="tag">TLS</span><span class="tag">Anomaly Detection</span>
         </div>
-      </li>
+        <a class="pc-link" href="https://github.com/Adithya9x/network-traffic-analysis-wireshark" target="_blank" rel="noopener">View repository ↗</a>
+      </article>
 
-    </ol>
+      <article class="project-card project-card-highlight">
+        <div class="pc-head">
+          <span class="pc-date">Jun 2026</span>
+          <span class="role-badge">Solo</span>
+        </div>
+        <h3>VulnProbe</h3>
+        <p class="pc-desc">
+          A Python scanner that automates vulnerability assessment: port scanning,
+          service fingerprinting via Nmap, and CVE cross-referencing against the
+          NVD API, with auto-generated colour-coded HTML reports.
+        </p>
+        <p class="pc-highlight">Found a real HIGH-severity CVE — CVE-2021-44224 — in an outdated Apache httpd service during testing.</p>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Nmap</span><span class="tag">NVD API</span><span class="tag">Sockets</span>
+        </div>
+        <a class="pc-link" href="https://github.com/Adithya9x/VulnProbe" target="_blank" rel="noopener">View repository ↗</a>
+      </article>
+
+      <article class="project-card">
+        <div class="pc-head">
+          <span class="pc-date">Jun 2026</span>
+          <span class="role-badge">Team · Frontend, behavioural capture</span>
+        </div>
+        <h3>PhantomGrid</h3>
+        <p class="pc-desc">
+          A three-layer passive behavioural authentication engine for banking
+          portals — it scores every session on decoy-tap patterns, navigation
+          intent, and PIN-entry rhythm, so stolen credentials alone can't get an
+          attacker in. Built the frontend signal-capture layer, packaging tap,
+          dwell, and keystroke timing into the behavioural payload sent to the
+          scoring backend. Built for the PSBs Hackathon 2026.
+        </p>
+        <div class="tag-row">
+          <span class="tag">JavaScript</span><span class="tag">FastAPI</span><span class="tag">Isolation Forest</span><span class="tag">DTW</span>
+        </div>
+        <a class="pc-link" href="https://github.com/Pyhroff/PhantomGrid" target="_blank" rel="noopener">View repository ↗</a>
+      </article>
+
+      <article class="project-card project-card-highlight">
+        <div class="pc-head">
+          <span class="pc-date">Jul 2026</span>
+          <span class="role-badge">Solo</span>
+        </div>
+        <h3>Sentinel — Deception-Based SOC Detection</h3>
+        <p class="pc-desc">
+          A honeytoken-based detection platform that removes false positives by
+          design: fake AWS credentials, SSH keys, and .env files are planted so
+          any interaction with them is a confirmed attacker action, not a
+          probability. A Python file-monitoring engine tags each event to the
+          relevant MITRE ATT&amp;CK technique and fires a live Flask dashboard the
+          moment a honeytoken is touched.
+        </p>
+        <p class="pc-highlight">Validated end to end against a real simulated attacker on Kali Linux, over SSH, against an Ubuntu victim host.</p>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Watchdog/inotify</span><span class="tag">Flask</span><span class="tag">MITRE ATT&amp;CK</span>
+        </div>
+        <a class="pc-link" href="https://github.com/Adithya9x/sentinel-deception" target="_blank" rel="noopener">View repository ↗</a>
+      </article>
+
+    </div>
   </section>
 
   <section class="certs" id="certs">
