@@ -7,7 +7,7 @@
 <meta name="description" content="Jyothiradithya Madapati — Aspiring SOC Analyst and Cybersecurity Undergraduate at IIIT Kottayam.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,82 +17,130 @@
 <header class="nav">
   <a href="#home" class="nav-logo">MJR<span>.</span></a>
   <nav class="nav-links">
-    <a href="#about">About</a>
-    <a href="#work">Work</a>
-    <a href="#certs">Certifications</a>
-    <a href="#contact">Contact</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#work" class="nav-link">Built By ME</a>
+    <a href="#certs" class="nav-link">Certifications</a>
+    <a href="#contact" class="nav-link">Contact Me</a>
   </nav>
-  <a href="resume.pdf" download class="nav-resume">Résumé</a>
 </header>
+<div class="nav-strip"></div>
 
 <main>
 
   <section class="hero" id="home">
     <div class="hero-orb"></div>
-    <p class="hero-kicker">Aspiring SOC Analyst · IIIT Kottayam</p>
-    <h1 class="hero-name">Jyothiradithya<br>Madapati</h1>
-    <p class="hero-copy">
-      I build the systems that watch for what shouldn't be there — a virtualized SOC
-      lab running Wazuh, a vulnerability scanner that turned up a real CVE, and a
-      deception platform that catches attackers by architecture instead of guesswork.
-      Right now I'm sharpening blue-team instincts through TryHackMe and job
-      simulations with Deloitte and TCS.
+    <p class="hero-kicker hero-anim" style="--d:0">-- Open To Internships 2026</p>
+    <h1 class="hero-name hero-anim" style="--d:1">
+      <span class="hn-first">Jyothiradithya</span><br>
+      <span class="hn-last">Madapati</span>
+    </h1>
+    <p class="hero-tagline hero-anim" style="--d:2">Cyber Security Student At IIIT Kottayam <span class="dot-sep">.</span> Aspiring SOC Analyst <span class="dot-sep">.</span> Vulnerability Assessment</p>
+    <p class="hero-copy hero-anim" style="--d:3">
+      A cybersecurity student focused on <span class="hl-lift">defensive security</span> and intelligent
+      threat detection. From virtual SOC labs to behavioral authentication systems,
+      I build practical solutions that tackle real-world security challenges.
+      Currently in 3rd year at IIIT Kottayam, sharpening my skills through
+      hands-on projects and security research.
     </p>
-    <div class="hero-actions">
-      <a href="#work" class="btn btn-primary">View my work</a>
-      <a href="resume.pdf" download class="btn btn-ghost">Download résumé</a>
+    <div class="hero-actions hero-anim" style="--d:4">
+      <a href="#work" class="btn btn-primary magnetic">View My Work</a>
+      <a href="resume.pdf" download class="btn btn-ghost magnetic">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16"/></svg>
+        Resume
+      </a>
+      <a href="https://github.com/Adithya9x" target="_blank" rel="noopener" class="btn btn-ghost magnetic">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.64 1.03 2.76 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+        GitHub
+      </a>
+    </div>
+    <div class="hero-stats hero-anim" style="--d:5">
+      <span>6 Projects</span><span class="stat-sep">·</span><span>3rd Year</span><span class="stat-sep">·</span><span>6 Certifications</span>
     </div>
   </section>
 
   <section class="about" id="about">
-    <h2 class="section-title">About</h2>
+    <h2 class="whoami-title">WHO AM I</h2>
     <div class="about-grid">
-      <div class="about-edu">
-        <p class="edu-institute">Indian Institute of Information Technology, Kottayam</p>
-        <p class="edu-degree">B.Tech, Computer Science &amp; Engineering</p>
-        <p class="edu-spec">Cybersecurity Specialization · 3rd Year · Expected 2028</p>
+      <div class="about-left">
         <p class="about-copy">
-          My work sits at the intersection of network defence and behavioural
-          detection — reading traffic for what it reveals, and building systems
-          that trust actions over credentials. Comfortable moving between a
-          packet capture, a SIEM dashboard, and a line of Python.
+          I'm Jyothiradithya Madapati, a Cybersecurity student at IIIT Kottayam with
+          a strong interest in Security Operations and defensive security. I enjoy
+          understanding how attacks work, analyzing systems and networks, and
+          building practical solutions to security problems.
         </p>
+        <p class="about-copy">
+          I learn best by getting hands-on — building projects, experimenting with
+          different technologies, and digging deeper into the concepts behind the
+          tools I use. While my primary focus is SOC and defensive security, I enjoy
+          exploring areas such as network security, ethical hacking, cryptography,
+          and AI in cybersecurity.
+        </p>
+        <p class="about-copy">
+          My goal is to turn this curiosity and hands-on experience into strong,
+          industry-ready skills and grow into a capable security professional.
+        </p>
+        <div class="info-list">
+          <div class="info-row"><span class="info-label">college</span><span class="info-value">IIIT Kottayam</span></div>
+          <div class="info-row"><span class="info-label">degree</span><span class="info-value">B.Tech CSE, Cybersecurity Specialization</span></div>
+          <div class="info-row"><span class="info-label">email</span><a class="info-value info-link" href="mailto:madapatijyothiradithya@gmail.com">madapatijyothiradithya@gmail.com</a></div>
+          <div class="info-row"><span class="info-label">github</span><a class="info-value info-link" href="https://github.com/Adithya9x" target="_blank" rel="noopener">@Adithya9x</a></div>
+          <div class="info-row"><span class="info-label">linkedin</span><a class="info-value info-link" href="https://www.linkedin.com/in/jyothiradithya-madapati" target="_blank" rel="noopener">jyothiradithya-madapati</a></div>
+        </div>
       </div>
       <div class="about-skills">
+        <p class="skills-heading">Skills</p>
         <div class="skill-group">
-          <p class="skill-label">Security Tools</p>
+          <p class="skill-label">Security Concepts</p>
           <div class="tag-row">
-            <span class="tag">Wazuh</span><span class="tag">Nmap</span><span class="tag">Wireshark</span><span class="tag">VirtualBox</span>
+            <span class="tag">Vulnerability Assessment</span><span class="tag">Threat Analysis</span><span class="tag">Cryptography</span><span class="tag">Authentication</span><span class="tag">Zero-Knowledge Proofs (ZKP)</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-label">AI &amp; Security</p>
+          <div class="tag-row">
+            <span class="tag">AI for Cybersecurity</span><span class="tag">RAG Systems</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-label">Security Operations</p>
+          <div class="tag-row">
+            <span class="tag">SOC Fundamentals</span><span class="tag">Threat Detection</span><span class="tag">Security Monitoring</span><span class="tag">Log Analysis</span><span class="tag">Incident Response</span>
           </div>
         </div>
         <div class="skill-group">
           <p class="skill-label">Networking</p>
           <div class="tag-row">
-            <span class="tag">Network Security</span><span class="tag">Traffic Analysis</span><span class="tag">DNS</span><span class="tag">TCP/IP</span><span class="tag">SSH</span>
+            <span class="tag">Network Security</span><span class="tag">Traffic Analysis</span><span class="tag">TCP/IP</span><span class="tag">DNS</span><span class="tag">SSH</span><span class="tag">Packet Analysis</span>
           </div>
         </div>
         <div class="skill-group">
-          <p class="skill-label">Security Concepts</p>
+          <p class="skill-label">Security Tools</p>
           <div class="tag-row">
-            <span class="tag">Vulnerability Assessment</span><span class="tag">Threat &amp; Vuln. Management</span><span class="tag">Information Security Awareness</span>
+            <span class="tag">Wazuh</span><span class="tag">Wireshark</span><span class="tag">Nmap</span><span class="tag">Kali Linux</span><span class="tag">Cisco Packet Tracer</span><span class="tag">VirtualBox</span>
           </div>
         </div>
         <div class="skill-group">
           <p class="skill-label">Systems</p>
           <div class="tag-row">
-            <span class="tag">Kali Linux</span><span class="tag">Ubuntu</span><span class="tag">Linux</span><span class="tag">Virtual Machines</span>
+            <span class="tag">Linux</span><span class="tag">Ubuntu</span><span class="tag">Kali Linux</span><span class="tag">Virtual Machines</span><span class="tag">Windows</span>
           </div>
         </div>
         <div class="skill-group">
-          <p class="skill-label">Languages</p>
+          <p class="skill-label">Programming</p>
           <div class="tag-row">
-            <span class="tag">Python</span><span class="tag">C</span><span class="tag">HTML</span><span class="tag">CSS</span>
+            <span class="tag">Python</span><span class="tag">C</span><span class="tag">SQL</span><span class="tag">HTML/CSS</span>
           </div>
         </div>
         <div class="skill-group">
-          <p class="skill-label">Other Skills</p>
+          <p class="skill-label">Currently Learning</p>
           <div class="tag-row">
-            <span class="tag">Problem Solving</span><span class="tag">Project Management</span><span class="tag">Communication</span>
+            <span class="tag tag-learning">SOC Level 1</span><span class="tag tag-learning">Cloud Security</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-label">Other</p>
+          <div class="tag-row">
+            <span class="tag">Problem Solving</span><span class="tag">Technical Research</span><span class="tag">Team Collaboration</span>
           </div>
         </div>
       </div>
@@ -100,11 +148,11 @@
   </section>
 
   <section class="work" id="work">
-    <h2 class="section-title">Projects</h2>
+    <h2 class="section-title">Built By ME</h2>
     <div class="project-grid">
 
       <article class="project-card status-active">
-        <span class="status-badge"><span class="status-dot"></span>Currently working</span>
+        <span class="status-badge"><span class="status-dot"></span>In Progress</span>
         <div class="pc-head">
           <span class="pc-date">Feb 2026</span>
           <span class="role-badge">Team · RAG pipeline owner</span>
@@ -250,19 +298,29 @@
   </section>
 
   <section class="contact" id="contact">
-    <h2 class="section-title">Contact</h2>
-    <p class="contact-copy">Open to SOC Analyst and Blue Team internship opportunities.</p>
-    <div class="contact-links">
-      <a href="mailto:madapatijyothiradithya@gmail.com">madapatijyothiradithya@gmail.com</a>
-      <a href="https://www.linkedin.com/in/jyothiradithya-madapati" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/Adithya9x" target="_blank" rel="noopener">GitHub</a>
+    <p class="section-title contact-eyebrow">Contact Me</p>
+    <h2 class="contact-heading">Open To Opportunities</h2>
+    <p class="contact-sub">Looking for SOC Analyst and Blue Team internships — always up for a conversation about defensive security.</p>
+    <div class="contact-cards">
+      <a class="contact-card magnetic" href="mailto:madapatijyothiradithya@gmail.com">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7L22 6"/></svg>
+        <span>Email</span>
+      </a>
+      <a class="contact-card magnetic" href="https://www.linkedin.com/in/jyothiradithya-madapati" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 1 1-4-.01 2 2 0 0 1 4 .01ZM3.5 8.75h3.9V21h-3.9V8.75Zm6.75 0h3.74v1.68h.05c.52-.98 1.8-2.02 3.7-2.02 3.95 0 4.68 2.6 4.68 5.98V21h-3.9v-5.85c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.53-2.26 3.1V21h-3.9V8.75Z"/></svg>
+        <span>LinkedIn</span>
+      </a>
+      <a class="contact-card magnetic" href="https://github.com/Adithya9x" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.64 1.03 2.76 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+        <span>GitHub</span>
+      </a>
     </div>
   </section>
 
 </main>
 
 <footer class="footer">
-  <p>Jyothiradithya Madapati — built and monitored from IIIT Kottayam.</p>
+  <p>Written in Python. Secured with curiosity. From IIIT Kottayam.</p>
 </footer>
 
 <script src="script.js"></script>

@@ -9,7 +9,7 @@ window.addEventListener('mousemove', (e) => {
 });
 
 function animateDot() {
-  const ease = reduceMotion ? 1 : 0.2;
+  const ease = reduceMotion ? 1 : 0.22;
   dotX += (mouseX - dotX) * ease;
   dotY += (mouseY - dotY) * ease;
   dot.style.left = dotX + 'px';
@@ -22,6 +22,20 @@ document.querySelectorAll('a, button, .project-card, .cert-card').forEach((el) =
   el.addEventListener('mouseenter', () => dot.classList.add('active'));
   el.addEventListener('mouseleave', () => dot.classList.remove('active'));
 });
+
+if (!reduceMotion) {
+  document.querySelectorAll('.magnetic').forEach((el) => {
+    el.addEventListener('mousemove', (e) => {
+      const rect = el.getBoundingClientRect();
+      const relX = e.clientX - rect.left - rect.width / 2;
+      const relY = e.clientY - rect.top - rect.height / 2;
+      el.style.transform = `translate(${relX * 0.18}px, ${relY * 0.28}px)`;
+    });
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = 'translate(0, 0)';
+    });
+  });
+}
 
 const sectionTargets = document.querySelectorAll('.about, .work, .certs, .contact');
 const sectionObserver = new IntersectionObserver((entries) => {
@@ -48,6 +62,6 @@ function staggerReveal(selector, delayStep) {
   items.forEach((item) => obs.observe(item));
 }
 
-staggerReveal('.skill-group', 90);
+staggerReveal('.skill-group', 80);
 staggerReveal('.project-card', 100);
 staggerReveal('.cert-card', 80);
