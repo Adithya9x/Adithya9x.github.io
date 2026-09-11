@@ -1,332 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jyothiradithya Madapati — Cybersecurity Undergraduate</title>
-<meta name="description" content="Jyothiradithya Madapati — Aspiring SOC Analyst and Cybersecurity Undergraduate at IIIT Kottayam.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Jyothiradithya Madapati — Cybersecurity Undergraduate at IIIT Kottayam, focused on SOC and defensive security.">
+<title>Jyothiradithya Madapati — Cybersecurity</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07090c; --panel:#0c1015; --panel2:#10151b; --text:#e9eef3; --muted:#8e9aa7;
+  --line:rgba(155,180,198,.15); --accent:#76e3b4; --accent2:#8fc7ff;
+  --max:1160px; --ease:cubic-bezier(.2,.75,.2,1);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:
+ radial-gradient(circle at 80% 10%,rgba(118,227,180,.08),transparent 30%),
+ radial-gradient(circle at 15% 35%,rgba(143,199,255,.05),transparent 28%),
+ linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+ background-size:auto,auto,48px 48px,48px 48px}
+body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.32;background-image:
+ radial-gradient(circle at 20% 20%,var(--accent) 0 1px,transparent 1.5px),
+ radial-gradient(circle at 70% 65%,var(--accent2) 0 1px,transparent 1.5px);
+ background-size:180px 180px,240px 240px; mask-image:linear-gradient(to bottom,#000,transparent 85%)}
+a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:20;width:min(980px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;padding:10px 12px 10px 18px;border:1px solid var(--line);background:rgba(7,9,12,.76);backdrop-filter:blur(16px);border-radius:16px}
+.logo{font:500 13px "DM Mono",monospace;letter-spacing:.08em}.navlinks{display:flex;gap:4px}.navlinks a{font-size:12px;color:var(--muted);padding:8px 11px;border-radius:10px;transition:.35s var(--ease)}.navlinks a:hover,.navlinks a.active{color:var(--text);background:rgba(255,255,255,.06)}
+.hero{min-height:100vh;display:grid;align-items:center;padding:140px 0 90px;position:relative}
+.eyebrow{display:inline-flex;gap:9px;align-items:center;color:var(--accent);font:500 12px "DM Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px var(--accent)}
+h1{font-size:clamp(52px,9vw,112px);line-height:.93;letter-spacing:-.065em;margin:22px 0;max-width:900px}
+h1 span{color:transparent;-webkit-text-stroke:1px rgba(233,238,243,.55)}
+.hero p{max-width:680px;color:var(--muted);font-size:18px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 17px;border:1px solid var(--line);border-radius:12px;font-size:13px;font-weight:700;transition:transform .35s var(--ease),border-color .35s,background .35s,box-shadow .35s}
+.btn.primary{background:var(--text);color:#080a0d;border-color:var(--text)}.btn:hover{transform:translateY(-3px);border-color:rgba(118,227,180,.5);box-shadow:0 12px 30px rgba(0,0,0,.25)}.btn.primary:hover{background:var(--accent);border-color:var(--accent)}
+.stats{display:flex;gap:0;margin-top:72px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);max-width:760px}.stat{padding:17px 30px 17px 0;margin-right:30px;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat b{display:block;font-size:21px}.stat small{color:var(--muted);font:400 10px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.08em}
+section{padding:110px 0}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}.sectionhead h2{font-size:clamp(30px,5vw,54px);letter-spacing:-.045em;line-height:1;margin:0}.sectionhead p{max-width:440px;color:var(--muted);margin:0;font-size:14px}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:70px}.about p{font-size:18px;color:#bdc7d0}.meta{display:grid;gap:14px}.meta div{padding:17px 0;border-bottom:1px solid var(--line)}.meta small{display:block;color:var(--muted);font:400 10px "DM Mono",monospace;text-transform:uppercase}.meta b{font-size:14px}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.skill{padding:22px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(255,255,255,.035),rgba(255,255,255,.012));border-radius:15px;transition:.4s var(--ease)}.skill:hover{transform:translateY(-4px);border-color:rgba(118,227,180,.3)}.skill h3{margin:0 0 13px;font-size:13px}.tags{display:flex;flex-wrap:wrap;gap:7px}.tag{font:400 11px "DM Mono",monospace;color:#b8c4ce;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.018)}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.project{position:relative;padding:27px;border:1px solid var(--line);background:rgba(10,14,19,.72);border-radius:18px;overflow:hidden;transition:.45s var(--ease)}.project:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,0%),rgba(118,227,180,.10),transparent 25%);opacity:0;transition:.4s}.project:hover{transform:translateY(-6px);border-color:rgba(118,227,180,.34)}.project:hover:before{opacity:1}.project>*{position:relative}.projecttop{display:flex;justify-content:space-between;gap:20px;color:var(--muted);font:400 10px "DM Mono",monospace;text-transform:uppercase}.project h3{font-size:24px;letter-spacing:-.03em;margin:26px 0 10px}.project p{color:var(--muted);font-size:14px}.project .tags{margin-top:20px}.project a{display:inline-flex;margin-top:22px;color:var(--accent);font:500 11px "DM Mono",monospace}
+.certgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.cert{padding:21px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.018)}.cert small{color:var(--accent);font:500 10px "DM Mono",monospace}.cert b{display:block;margin-top:8px;font-size:14px}
+.contact{border:1px solid var(--line);border-radius:22px;padding:48px;background:linear-gradient(120deg,rgba(118,227,180,.06),rgba(143,199,255,.035));display:flex;justify-content:space-between;align-items:end;gap:30px}.contact h2{font-size:clamp(34px,6vw,68px);line-height:.95;letter-spacing:-.055em;margin:0 0 14px}.contact p{color:var(--muted);max-width:520px}
+footer{padding:30px 0 50px;color:var(--muted);font:400 10px "DM Mono",monospace;display:flex;justify-content:space-between}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s var(--ease),transform .75s var(--ease)}.reveal.in{opacity:1;transform:none}.stagger>*{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease),transform .6s var(--ease)}.stagger.in>*{opacity:1;transform:none}.stagger.in>*:nth-child(2){transition-delay:.06s}.stagger.in>*:nth-child(3){transition-delay:.12s}.stagger.in>*:nth-child(4){transition-delay:.18s}
+@media(max-width:800px){.navlinks{display:none}.wrap{width:min(var(--max),calc(100% - 28px))}.hero{padding-top:125px}.hero p{font-size:16px}.stats{margin-top:48px}.stat{padding-right:16px;margin-right:16px}.about,.skills,.projects{grid-template-columns:1fr}.certgrid{grid-template-columns:1fr 1fr}.contact{display:block;padding:30px}.contact .actions{margin-top:25px}section{padding:78px 0}.sectionhead{display:block}.sectionhead p{margin-top:15px}}
+@media(max-width:480px){h1{font-size:54px}.stats{display:grid;grid-template-columns:1fr 1fr}.stat{border:0}.certgrid{grid-template-columns:1fr}footer{display:block}.footerlinks{margin-top:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.stagger>*{opacity:1;transform:none;transition:none}.btn,.skill,.project{transition:none}}
+</style>
 </head>
 <body>
-
-<div class="cursor-dot" id="cursorDot"></div>
-
-<header class="nav">
-  <div class="nav-inner">
-    <a href="#home" class="nav-logo">MJR<span>.</span></a>
-    <nav class="nav-links">
-      <a href="#about" class="nav-link">About</a>
-    <a href="#work" class="nav-link">Built By ME</a>
-    <a href="#certs" class="nav-link">Certifications</a>
-    <a href="#contact" class="nav-link">Contact Me</a>
-    </nav>
+<nav>
+  <a class="logo" href="#top">MJR.</a>
+  <div class="navlinks">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#certs">Certifications</a><a href="#contact">Contact</a>
   </div>
-</header>
-<div class="nav-strip"></div>
+</nav>
 
-<main>
+<main id="top">
+<section class="hero">
+<div class="wrap reveal">
+  <div class="eyebrow"><span class="dot"></span> Open to SOC / Blue Team internships</div>
+  <h1>Jyothiradithya<br><span>Madapati</span></h1>
+  <p>Cybersecurity undergraduate at IIIT Kottayam focused on Security Operations, defensive security, threat detection, and practical security engineering.</p>
+  <div class="actions">
+    <a class="btn primary" href="#projects">View my work ↗</a>
+    <a class="btn" href="mailto:madapatijyothiradithya@gmail.com">Get in touch</a>
+    <a class="btn" href="https://github.com/Adithya9x" target="_blank" rel="noreferrer">GitHub ↗</a>
+  </div>
+  <div class="stats stagger">
+    <div class="stat"><b>6</b><small>Projects</small></div><div class="stat"><b>6</b><small>Certifications</small></div><div class="stat"><b>IIITK</b><small>B.Tech CSE · Cybersecurity</small></div>
+  </div>
+</div>
+</section>
 
-  <section class="hero" id="home">
-    <div class="hero-orb"></div>
-    <p class="hero-kicker hero-anim" style="--d:0">-- Open To Internships 2026</p>
-    <h1 class="hero-name hero-anim" style="--d:1">
-      <span class="hn-first">Jyothiradithya</span><br>
-      <span class="hn-last">Madapati</span>
-    </h1>
-    <p class="hero-tagline hero-anim" style="--d:2">Cyber Security Student At IIIT Kottayam <span class="dot-sep">.</span> Aspiring SOC Analyst <span class="dot-sep">.</span> Vulnerability Assessment</p>
-    <p class="hero-copy hero-anim" style="--d:3">
-      A cybersecurity student focused on <span class="hl-lift">defensive security</span> and intelligent
-      threat detection. From virtual SOC labs to behavioral authentication systems,
-      I build practical solutions that tackle real-world security challenges.
-      Currently in 3rd year at IIIT Kottayam, sharpening my skills through
-      hands-on projects and security research.
-    </p>
-    <div class="hero-actions hero-anim" style="--d:4">
-      <a href="#work" class="btn btn-primary magnetic">View My Work</a>
-      <a href="resume.pdf" download class="btn btn-ghost magnetic">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16"/></svg>
-        Resume
-      </a>
-      <a href="https://github.com/Adithya9x" target="_blank" rel="noopener" class="btn btn-ghost magnetic">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.64 1.03 2.76 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
-        GitHub
-      </a>
-    </div>
-    <div class="hero-stats hero-anim" style="--d:5">
-      <div class="stat-block"><span class="stat-num">6</span><span class="stat-label">Projects</span></div>
-      <div class="stat-block"><span class="stat-num">3rd</span><span class="stat-label">Year B.Tech</span></div>
-      <div class="stat-block"><span class="stat-num">6</span><span class="stat-label">Certifications</span></div>
-    </div>
-  </section>
+<section id="about"><div class="wrap">
+<div class="sectionhead reveal"><h2>Who I am</h2><p>Learning security by building, investigating, and understanding what happens beneath the tools.</p></div>
+<div class="about">
+<div class="reveal">
+<p>I'm Jyothiradithya Madapati, a Cybersecurity student at IIIT Kottayam with a strong interest in Security Operations and defensive security. I enjoy understanding how attacks work, analyzing systems and networks, and building practical solutions to security problems.</p>
+<p>I learn best by getting hands-on — building projects, experimenting with different technologies, and digging deeper into the concepts behind the tools I use. My primary focus is SOC and defensive security, with strong interests in network security, cryptography, AI for cybersecurity, and security automation.</p>
+<p>My goal is to turn this curiosity and hands-on experience into strong, industry-ready skills and grow into a capable security professional.</p>
+</div>
+<div class="meta reveal"><div><small>College</small><b>IIIT Kottayam</b></div><div><small>Degree</small><b>B.Tech CSE · Cybersecurity Specialization</b></div><div><small>Focus</small><b>SOC · Blue Team · Threat Detection</b></div><div><small>Email</small><b>madapatijyothiradithya@gmail.com</b></div></div>
+</div></div></section>
 
-  <section class="about" id="about">
-    <h2 class="whoami-title">WHO AM I</h2>
-    <div class="about-grid">
-      <div class="about-left">
-        <p class="about-copy">
-          I'm Jyothiradithya Madapati, a Cybersecurity student at IIIT Kottayam with
-          a strong interest in Security Operations and defensive security. I enjoy
-          understanding how attacks work, analyzing systems and networks, and
-          building practical solutions to security problems.
-        </p>
-        <p class="about-copy">
-          I learn best by getting hands-on — building projects, experimenting with
-          different technologies, and digging deeper into the concepts behind the
-          tools I use. While my primary focus is SOC and defensive security, I enjoy
-          exploring areas such as network security, ethical hacking, cryptography,
-          and AI in cybersecurity.
-        </p>
-        <p class="about-copy">
-          My goal is to turn this curiosity and hands-on experience into strong,
-          industry-ready skills and grow into a capable security professional.
-        </p>
-        <div class="info-list">
-          <div class="info-row"><span class="info-label">college:</span><span class="info-value">IIIT Kottayam</span></div>
-          <div class="info-row"><span class="info-label">degree:</span><span class="info-value">B.Tech CSE, Cybersecurity Specialization</span></div>
-          <div class="info-row"><span class="info-label">email:</span><a class="info-value info-link" href="mailto:madapatijyothiradithya@gmail.com">madapatijyothiradithya@gmail.com</a></div>
-          <div class="info-row"><span class="info-label">github:</span><a class="info-value info-link" href="https://github.com/Adithya9x" target="_blank" rel="noopener">@Adithya9x</a></div>
-          <div class="info-row"><span class="info-label">linkedin:</span><a class="info-value info-link" href="https://www.linkedin.com/in/jyothiradithya-madapati" target="_blank" rel="noopener">jyothiradithya-madapati</a></div>
-        </div>
-      </div>
-      <div class="about-skills">
-        <p class="skills-heading">Skills</p>
-        <div class="skill-group">
-          <p class="skill-label">Security Concepts</p>
-          <div class="tag-row">
-            <span class="tag">Vulnerability Assessment</span><span class="tag">Threat Analysis</span><span class="tag">Cryptography</span><span class="tag">Authentication</span><span class="tag">Zero-Knowledge Proofs (ZKP)</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <p class="skill-label">AI &amp; Security</p>
-          <div class="tag-row">
-            <span class="tag">AI for Cybersecurity</span><span class="tag">RAG Systems</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <p class="skill-label">Security Operations</p>
-          <div class="tag-row">
-            <span class="tag">SOC Fundamentals</span><span class="tag">Threat Detection</span><span class="tag">Security Monitoring</span><span class="tag">Log Analysis</span><span class="tag">Incident Response</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <p class="skill-label">Networking</p>
-          <div class="tag-row">
-            <span class="tag">Network Security</span><span class="tag">Traffic Analysis</span><span class="tag">TCP/IP</span><span class="tag">DNS</span><span class="tag">SSH</span><span class="tag">Packet Analysis</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <p class="skill-label">Security Tools</p>
-          <div class="tag-row">
-            <span class="tag">Wazuh</span><span class="tag">Wireshark</span><span class="tag">Nmap</span><span class="tag">Kali Linux</span><span class="tag">Cisco Packet Tracer</span><span class="tag">VirtualBox</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <p class="skill-label">Systems</p>
-          <div class="tag-row">
-            <span class="tag">Linux</span><span class="tag">Ubuntu</span><span class="tag">Kali Linux</span><span class="tag">Virtual Machines</span><span class="tag">Windows</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <p class="skill-label">Programming</p>
-          <div class="tag-row">
-            <span class="tag">Python</span><span class="tag">C</span><span class="tag">SQL</span><span class="tag">HTML/CSS</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <p class="skill-label">Currently Learning</p>
-          <div class="tag-row">
-            <span class="tag tag-learning">SOC Level 1</span><span class="tag tag-learning">Cloud Security</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <p class="skill-label">Other</p>
-          <div class="tag-row">
-            <span class="tag">Problem Solving</span><span class="tag">Technical Research</span><span class="tag">Team Collaboration</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="skills"><div class="wrap">
+<div class="sectionhead reveal"><h2>Skills</h2><p>A practical stack built around security operations, networks, systems, and security-focused development.</p></div>
+<div class="skills stagger">
+<div class="skill"><h3>SECURITY OPERATIONS</h3><div class="tags"><span class="tag">SOC Fundamentals</span><span class="tag">Threat Detection</span><span class="tag">Security Monitoring</span><span class="tag">Log Analysis</span><span class="tag">Incident Response</span></div></div>
+<div class="skill"><h3>NETWORKING</h3><div class="tags"><span class="tag">Network Security</span><span class="tag">Traffic Analysis</span><span class="tag">TCP/IP</span><span class="tag">DNS</span><span class="tag">SSH</span><span class="tag">Packet Analysis</span></div></div>
+<div class="skill"><h3>SECURITY TOOLS</h3><div class="tags"><span class="tag">Wazuh</span><span class="tag">Wireshark</span><span class="tag">Nmap</span><span class="tag">Kali Linux</span><span class="tag">Cisco Packet Tracer</span><span class="tag">VirtualBox</span></div></div>
+<div class="skill"><h3>SECURITY CONCEPTS</h3><div class="tags"><span class="tag">Vulnerability Assessment</span><span class="tag">Threat Analysis</span><span class="tag">Cryptography</span><span class="tag">Authentication</span><span class="tag">Zero-Knowledge Proofs</span></div></div>
+<div class="skill"><h3>AI & SECURITY</h3><div class="tags"><span class="tag">AI for Cybersecurity</span><span class="tag">RAG Systems</span></div></div>
+<div class="skill"><h3>PROGRAMMING & SYSTEMS</h3><div class="tags"><span class="tag">Python</span><span class="tag">C</span><span class="tag">SQL</span><span class="tag">HTML/CSS</span><span class="tag">Linux</span><span class="tag">Ubuntu</span><span class="tag">Windows</span><span class="tag">Virtual Machines</span></div></div>
+</div></div></section>
 
-  <section class="work" id="work">
-    <h2 class="section-title">Built By ME</h2>
-    <div class="project-grid">
+<section id="projects"><div class="wrap">
+<div class="sectionhead reveal"><h2>Built by me</h2><p>Projects that reflect how I learn: build something real, test it, and understand the security problem behind it.</p></div>
+<div class="projects stagger">
+<article class="project"><div class="projecttop"><span>Feb 2026 · Team</span><span>RAG / AI</span></div><h3>College AI — RAG Engine</h3><p>Owned the retrieval-augmented generation core of a college information chatbot: query understanding, embeddings, FAISS-based context retrieval, filtering, prompt construction, and fallback handling so answers stay grounded in verified college data.</p><div class="tags"><span class="tag">Python</span><span class="tag">FAISS</span><span class="tag">Embeddings</span><span class="tag">Prompt Engineering</span></div><a href="https://github.com/Sparrowspidey/College-Ai" target="_blank">View repository ↗</a></article>
+<article class="project"><div class="projecttop"><span>Jun 2026 · Solo</span><span>SOC</span></div><h3>Cybersecurity Home Lab & SOC Monitoring</h3><p>Built a virtualized SOC lab using Kali Linux and Ubuntu on VirtualBox, deployed Wazuh for authentication-log monitoring, and simulated an SSH brute-force attack to validate detection end to end.</p><div class="tags"><span class="tag">Wazuh</span><span class="tag">VirtualBox</span><span class="tag">Kali Linux</span><span class="tag">OpenSSH</span></div></article>
+<article class="project"><div class="projecttop"><span>Jun 2026 · Solo</span><span>Network Security</span></div><h3>Network Traffic Analysis</h3><p>Captured and analyzed live Wi-Fi traffic across DNS, HTTP, and TLS, inspected SNI metadata, and investigated retransmissions and TCP resets in a SOC-style incident report.</p><div class="tags"><span class="tag">Wireshark</span><span class="tag">DNS</span><span class="tag">TLS/SNI</span><span class="tag">Anomaly Detection</span></div><a href="https://github.com/Adithya9x/network-traffic-analysis-wireshark" target="_blank">View repository ↗</a></article>
+<article class="project"><div class="projecttop"><span>Jun 2026 · Solo</span><span>Security Tooling</span></div><h3>VulnProbe</h3><p>Python-based vulnerability assessment tooling combining port scanning, Nmap service fingerprinting, and CVE cross-referencing through the NVD API, with generated HTML reports.</p><div class="tags"><span class="tag">Python</span><span class="tag">Nmap</span><span class="tag">NVD API</span><span class="tag">Sockets</span></div><a href="https://github.com/Adithya9x/VulnProbe" target="_blank">View repository ↗</a></article>
+<article class="project"><div class="projecttop"><span>Jun 2026 · Team</span><span>Behavioral Security</span></div><h3>PhantomGrid</h3><p>A passive behavioral-authentication engine for banking portals. Built the frontend signal-capture layer that packages tap, dwell, and keystroke timing into behavioral data for the scoring backend.</p><div class="tags"><span class="tag">JavaScript</span><span class="tag">FastAPI</span><span class="tag">Isolation Forest</span><span class="tag">DTW</span></div><a href="https://github.com/Pyhroff/PhantomGrid" target="_blank">View repository ↗</a></article>
+<article class="project"><div class="projecttop"><span>Jul 2026 · Solo</span><span>Detection</span></div><h3>Sentinel — Deception-Based SOC Detection</h3><p>A honeytoken-based detection platform using planted AWS credentials, SSH keys, and .env files as high-confidence tripwires. Events are mapped to MITRE ATT&CK techniques and surfaced through a live Flask dashboard.</p><div class="tags"><span class="tag">Python</span><span class="tag">Watchdog/inotify</span><span class="tag">Flask</span><span class="tag">MITRE ATT&CK</span></div><a href="https://github.com/Adithya9x/sentinel-deception" target="_blank">View repository ↗</a></article>
+</div></div></section>
 
-      <article class="project-card status-active">
-        <span class="status-badge"><span class="status-dot"></span>In Progress</span>
-        <div class="pc-head">
-          <span class="pc-date">Feb 2026</span>
-          <span class="role-badge">Team · RAG pipeline owner</span>
-        </div>
-        <h3>College AI — RAG Engine</h3>
-        <p class="pc-desc">
-          Owned the retrieval-augmented generation core of a college information
-          chatbot: query understanding, embedding, FAISS-based context retrieval,
-          filtering, prompt construction, and fallback handling, so answers come
-          strictly from verified college data instead of a guess.
-        </p>
-        <div class="tag-row">
-          <span class="tag">Python</span><span class="tag">FAISS</span><span class="tag">Embeddings</span><span class="tag">Prompt Engineering</span>
-        </div>
-        <a class="pc-link" href="https://github.com/Sparrowspidey/College-Ai" target="_blank" rel="noopener">View repository ↗</a>
-      </article>
+<section id="certs"><div class="wrap">
+<div class="sectionhead reveal"><h2>Certifications</h2><p>Selected learning milestones supporting my cybersecurity foundation.</p></div>
+<div class="certgrid stagger">
+<div class="cert"><small>SPLUNK</small><b>Intro to Splunk</b></div>
+<div class="cert"><small>IBM</small><b>Cybersecurity Fundamentals</b></div>
+<div class="cert"><small>DELOITTE · FORAGE</small><b>Cyber Job Simulation</b></div>
+<div class="cert"><small>TCS · FORAGE</small><b>Cybersecurity Analyst Job Simulation</b></div>
+<div class="cert"><small>MICROSOFT & LINKEDIN LEARNING</small><b>Career Essentials in Cybersecurity</b></div>
+<div class="cert"><small>CISCO NETWORKING ACADEMY</small><b>Introduction to Cybersecurity</b></div>
+</div></div></section>
 
-      <article class="project-card">
-        <div class="pc-head">
-          <span class="pc-date">Jun 2026</span>
-          <span class="role-badge">Solo</span>
-        </div>
-        <h3>Cybersecurity Home Lab &amp; SOC Monitoring</h3>
-        <p class="pc-desc">
-          Designed a virtualized SOC lab — Kali Linux and Ubuntu Server/Desktop on
-          VirtualBox with host-only networking and secure OpenSSH access — then
-          deployed Wazuh to monitor auth logs and failed logins, and simulated an
-          SSH brute-force attack to validate detection end to end.
-        </p>
-        <div class="tag-row">
-          <span class="tag">Wazuh SIEM</span><span class="tag">VirtualBox</span><span class="tag">Kali Linux</span><span class="tag">OpenSSH</span>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="pc-head">
-          <span class="pc-date">Jun 2026</span>
-          <span class="role-badge">Solo</span>
-        </div>
-        <h3>Network Traffic Analysis using Wireshark</h3>
-        <p class="pc-desc">
-          Captured and analysed live Wi-Fi traffic across DNS, HTTP, and TLS.
-          Correlated DNS query/response pairs by transaction ID, inspected TLS
-          Client Hello packets for SNI metadata, and flagged anomalies via resets,
-          retransmissions, and timing patterns in a SOC-style incident report.
-        </p>
-        <div class="tag-row">
-          <span class="tag">Wireshark</span><span class="tag">DNS</span><span class="tag">TLS</span><span class="tag">Anomaly Detection</span>
-        </div>
-        <a class="pc-link" href="https://github.com/Adithya9x/network-traffic-analysis-wireshark" target="_blank" rel="noopener">View repository ↗</a>
-      </article>
-
-      <article class="project-card project-card-highlight">
-        <div class="pc-head">
-          <span class="pc-date">Jun 2026</span>
-          <span class="role-badge">Solo</span>
-        </div>
-        <h3>VulnProbe</h3>
-        <p class="pc-desc">
-          A Python scanner that automates vulnerability assessment: port scanning,
-          service fingerprinting via Nmap, and CVE cross-referencing against the
-          NVD API, with auto-generated colour-coded HTML reports.
-        </p>
-        <p class="pc-highlight">Found a real HIGH-severity CVE — CVE-2021-44224 — in an outdated Apache httpd service during testing.</p>
-        <div class="tag-row">
-          <span class="tag">Python</span><span class="tag">Nmap</span><span class="tag">NVD API</span><span class="tag">Sockets</span>
-        </div>
-        <a class="pc-link" href="https://github.com/Adithya9x/VulnProbe" target="_blank" rel="noopener">View repository ↗</a>
-      </article>
-
-      <article class="project-card">
-        <div class="pc-head">
-          <span class="pc-date">Jun 2026</span>
-          <span class="role-badge">Team · Frontend, behavioural capture</span>
-        </div>
-        <h3>PhantomGrid</h3>
-        <p class="pc-desc">
-          A three-layer passive behavioural authentication engine for banking
-          portals — it scores every session on decoy-tap patterns, navigation
-          intent, and PIN-entry rhythm, so stolen credentials alone can't get an
-          attacker in. Built the frontend signal-capture layer, packaging tap,
-          dwell, and keystroke timing into the behavioural payload sent to the
-          scoring backend. Built for the PSBs Hackathon 2026.
-        </p>
-        <div class="tag-row">
-          <span class="tag">JavaScript</span><span class="tag">FastAPI</span><span class="tag">Isolation Forest</span><span class="tag">DTW</span>
-        </div>
-        <a class="pc-link" href="https://github.com/Pyhroff/PhantomGrid" target="_blank" rel="noopener">View repository ↗</a>
-      </article>
-
-      <article class="project-card project-card-highlight">
-        <div class="pc-head">
-          <span class="pc-date">Jul 2026</span>
-          <span class="role-badge">Solo</span>
-        </div>
-        <h3>Sentinel — Deception-Based SOC Detection</h3>
-        <p class="pc-desc">
-          A honeytoken-based detection platform that removes false positives by
-          design: fake AWS credentials, SSH keys, and .env files are planted so
-          any interaction with them is a confirmed attacker action, not a
-          probability. A Python file-monitoring engine tags each event to the
-          relevant MITRE ATT&amp;CK technique and fires a live Flask dashboard the
-          moment a honeytoken is touched.
-        </p>
-        <p class="pc-highlight">Validated end to end against a real simulated attacker on Kali Linux, over SSH, against an Ubuntu victim host.</p>
-        <div class="tag-row">
-          <span class="tag">Python</span><span class="tag">Watchdog/inotify</span><span class="tag">Flask</span><span class="tag">MITRE ATT&amp;CK</span>
-        </div>
-        <a class="pc-link" href="https://github.com/Adithya9x/sentinel-deception" target="_blank" rel="noopener">View repository ↗</a>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="certs" id="certs">
-    <h2 class="section-title">Certifications</h2>
-    <div class="cert-grid">
-      <div class="cert-card">
-        <p class="cert-issuer">Splunk</p>
-        <p class="cert-title">Intro to Splunk</p>
-      </div>
-      <div class="cert-card">
-        <p class="cert-issuer">IBM</p>
-        <p class="cert-title">Cybersecurity Fundamentals</p>
-      </div>
-      <div class="cert-card">
-        <p class="cert-issuer">Deloitte · via Forage</p>
-        <p class="cert-title">Cyber Job Simulation</p>
-      </div>
-      <div class="cert-card">
-        <p class="cert-issuer">Tata Consultancy Services · via Forage</p>
-        <p class="cert-title">Cybersecurity Analyst Job Simulation</p>
-      </div>
-      <div class="cert-card">
-        <p class="cert-issuer">Microsoft &amp; LinkedIn Learning</p>
-        <p class="cert-title">Career Essentials in Cybersecurity</p>
-      </div>
-      <div class="cert-card">
-        <p class="cert-issuer">Cisco Networking Academy</p>
-        <p class="cert-title">Introduction to Cybersecurity</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <p class="section-title contact-eyebrow">Contact Me</p>
-    <h2 class="contact-heading">Open To Opportunities</h2>
-    <p class="contact-sub">Looking for SOC Analyst and Blue Team internships — always up for a conversation about defensive security.</p>
-    <div class="contact-cards">
-      <a class="contact-card magnetic" href="mailto:madapatijyothiradithya@gmail.com">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7L22 6"/></svg>
-        <span>Email</span>
-      </a>
-      <a class="contact-card magnetic" href="https://www.linkedin.com/in/jyothiradithya-madapati" target="_blank" rel="noopener">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 1 1-4-.01 2 2 0 0 1 4 .01ZM3.5 8.75h3.9V21h-3.9V8.75Zm6.75 0h3.74v1.68h.05c.52-.98 1.8-2.02 3.7-2.02 3.95 0 4.68 2.6 4.68 5.98V21h-3.9v-5.85c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.53-2.26 3.1V21h-3.9V8.75Z"/></svg>
-        <span>LinkedIn</span>
-      </a>
-      <a class="contact-card magnetic" href="https://github.com/Adithya9x" target="_blank" rel="noopener">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.64 1.03 2.76 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
-        <span>GitHub</span>
-      </a>
-    </div>
-  </section>
-
+<section id="contact"><div class="wrap"><div class="contact reveal"><div><div class="eyebrow">Open to opportunities</div><h2>Let's talk security.</h2><p>Looking for SOC Analyst and Blue Team internships. Always up for a conversation about defensive security, detection, and practical cybersecurity.</p></div><div class="actions"><a class="btn primary" href="mailto:madapatijyothiradithya@gmail.com">Email me ↗</a><a class="btn" href="https://www.linkedin.com/in/jyothiradithya-madapati/" target="_blank">LinkedIn ↗</a></div></div></div></section>
 </main>
 
-<footer class="footer">
-  <p>Written in Python. Secured with curiosity. From IIIT Kottayam.</p>
-</footer>
+<footer class="wrap"><span>Written in code. Secured with curiosity. From IIIT Kottayam.</span><span class="footerlinks"><a href="https://github.com/Adithya9x" target="_blank">GitHub</a> · <a href="https://www.linkedin.com/in/jyothiradithya-madapati/" target="_blank">LinkedIn</a></span></footer>
 
-<script src="script.js"></script>
+<script>
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');observer.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>observer.observe(el));
+document.querySelectorAll('.project').forEach(card=>card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect();card.style.setProperty('--mx',`${e.clientX-r.left}px`);card.style.setProperty('--my',`${e.clientY-r.top}px`)}));
+const links=[...document.querySelectorAll('.navlinks a')], sections=links.map(a=>document.querySelector(a.getAttribute('href')));
+const navObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-35% 0px -55% 0px'});
+sections.forEach(s=>s&&navObs.observe(s));
+</script>
 </body>
 </html>
