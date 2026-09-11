@@ -1,17 +1,10 @@
 # Jyothiradithya Madapati — Portfolio
 
-A single-file GitHub Pages portfolio.
+Deployment-ready static portfolio for GitHub Pages.
 
-## Run locally
-Open `index.html` in a browser.
+## Files
+- `index.html` — complete responsive site (HTML/CSS/JS in one file)
+- Add your own `resume.pdf` in the repository root to activate the existing Resume button.
 
 ## Deploy
-Push `index.html` to a GitHub repository and enable GitHub Pages.
-
-The portfolio includes:
-- responsive layout
-- CSS technical background pattern
-- scroll reveal animations
-- consistent button/card interactions
-- reduced-motion accessibility
-- projects, skills, certifications and contact sections
+Upload the contents of this folder to the repository used for your GitHub Pages site and enable Pages from the repository's main branch/root.
